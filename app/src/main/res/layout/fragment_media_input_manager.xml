@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="216dp"
+    app:cardBackgroundColor="@color/goldish">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/mediaTypeSelector"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_toStartOf="@+id/keyboard_camera_button">
+
+                <ImageButton
+                    android:id="@+id/keyboard_image_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_messenger_margin_elements"
+                    android:background="@drawable/attach_circle"
+                    android:src="@drawable/ic_message_album" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/keyboard_image_button"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="@dimen/activity_messenger_margin_elements"
+                    android:textColor="@color/colorText"
+                    android:text="@string/activity_messenger_photo" />
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/keyboard_camera_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/activity_messenger_margin_elements"
+                android:background="@drawable/attach_circle"
+                android:src="@drawable/ic_message_camera" />
+
+            <TextView
+                android:id="@+id/keyboard_image_photo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/keyboard_camera_button"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorText"
+                android:paddingBottom="@dimen/activity_messenger_margin_elements"
+                android:text="@string/activity_messenger_camera" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/keyboard_camera_button">
+
+                <ImageButton
+                    android:id="@+id/keyboard_video_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_messenger_margin_elements"
+                    android:layout_margin="@dimen/activity_messenger_margin_elements"
+                    android:background="@drawable/attach_circle"
+                    android:src="@drawable/ic_message_videocam" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/keyboard_video_button"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="@dimen/activity_messenger_margin_elements"
+                    android:textColor="@color/colorText"
+                    android:text="@string/activity_messenger_video" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/keyboard_image_photo_text"
+                android:layout_toStartOf="@+id/keyboard_audio_button">
+
+                <ImageButton
+                    android:id="@+id/keyboard_voice_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="@dimen/activity_messenger_margin_elements"
+                    android:background="@drawable/attach_circle"
+                    android:src="@drawable/ic_message_voice" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/keyboard_voice_button"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="@dimen/activity_messenger_margin_elements"
+                    android:textColor="@color/colorText"
+                    android:text="@string/activity_messenger_voice" />
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/keyboard_audio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/keyboard_image_photo_text"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/activity_messenger_margin_elements"
+                android:background="@drawable/attach_circle"
+                android:src="@drawable/ic_music_note_white_24dp" />
+
+            <TextView
+                android:id="@+id/keyboard_audio_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/keyboard_audio_button"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorText"
+                android:paddingBottom="@dimen/activity_messenger_margin_elements"
+                android:text="@string/activity_messenger_audio" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/keyboard_image_photo_text"
+                android:layout_toEndOf="@+id/keyboard_audio_button">
+
+                <ImageButton
+                    android:id="@+id/keyboard_document_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_messenger_margin_elements"
+                    android:background="@drawable/attach_circle"
+                    android:src="@drawable/ic_message_file" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/keyboard_document_button"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="@dimen/activity_messenger_margin_elements"
+                    android:textColor="@color/colorText"
+                    android:text="@string/activity_messenger_document" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/selectedMediaPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/video_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:visibility="gone">
+
+                    <VideoView
+                        android:id="@+id/streamPreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/image_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/black">
+
+                    <ImageView
+                        android:id="@+id/imagePreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/mediaName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="media"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/closePreview"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="8dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_close_yellow"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/voiceRecorderView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textSize="24dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="00:00"/>
+
+                <LinearLayout
+                    android:id="@+id/recorderButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="42dp">
+
+                    <ImageButton
+                        android:id="@+id/recorderButtonMain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_fiber_manual_record"/>
+
+                    <ImageButton
+                        android:id="@+id/recorderButtonSec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_stop"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="32dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="Voice Recorder"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/closeRecorder"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="8dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_close_yellow"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

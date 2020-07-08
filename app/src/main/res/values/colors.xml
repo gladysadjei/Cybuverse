@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DBCD4B</color>
+    <color name="colorPrimaryDark">#31769A</color>
+    <color name="colorAccent">#4D7E8A</color>
+    <color name="colorButtonRed">#D81B60</color>
+    <color name="colorFacebook">#5585c5</color>
+    <color name="light_green">#07a61f</color>
+    <color name="dark_blue">#4D7E8A</color>
+    <color name="goldish">#DBCD4B</color>
+    <color name="ic_bg_blue_black">#556080</color>
+    <color name="white">#ffffff</color>
+    <color name="faded_white">#80ffffff</color>
+    <!-- The color black, equivalent to 0xff000000 -->
+    <color name="black">#ff000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="dim_foreground_dark_inverse_disabled">#80323232</color>
+    <color name="lighter_gray">#ddd</color>
+    <color name="darker_gray">#aaa</color>
+    <color name="keyguard_text_color_decline">#fe0a5a</color>
+    <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
+    <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
+    <color name="accessibility_focus_highlight">#bf39b500</color>
+    <color name="tooltip_background_dark">#e6616161</color>
+    <color name="tooltip_background_light">#e6FFFFFF</color>
+    <!-- FloatingToolbar -->
+
+
+    <!--t_game_colors-->
+    <color name="t_gold_dark">#C4B425</color>
+    <color name="t_yellow_light">#CEFF43</color>
+    <color name="t_blue_light">#5BAFC1</color>
+    <color name="t_blue_lighter">#31B2BB</color>
+    <color name="t_faded_blue_light">#7d31b2bb</color>
+    <color name="t_blue_dark">#31769A</color>
+    <color name="t_faded_blue_dark">#96042347</color>
+    <color name="t_ash">#CECECE</color>
+    <color name="t_reddish_orange">#F97721</color>
+    <color name="t_reddish_brown">#CF8D41</color>
+    <color name="t_purple">#C721E6</color>
+    <color name="t_green">#13801C</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="colorText">@android:color/white</color>
+
+    <color name="user_icon_3">#ff4285f4</color><!-- blue 500 -->
+    <color name="darker_blue">#31769A</color>
+    <color name="t_brown_border">#707070</color>
+    <color name="t_faded_yellow_light">#7fceff43</color>
+
+
+</resources>

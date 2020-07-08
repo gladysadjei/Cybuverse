@@ -1,0 +1,241 @@
+Cybuverse
+Adgjmptw$111
+TechupStudio.Apps@Pub
+Alias TechupStudio-Appd-KeyStore
+
+Quick Game
+    play random level or scene
+
+Game Mode Story
+	Give option to choose from
+	allow user to respond
+	rate good or bad level
+	
+	levels - difficulty (easy | hard)
+		- home with family and friends
+		- school with friends
+		- elder people
+		- random people
+		- events
+
+Chat with friends
+	give options to choose from using previous chat data
+	add to player point
+
+main activity
+shows type of game (story mode) - levels - random scene
+has activity to search and add friends and chat them for points
+
+on story mode selected 
+show introduction conversation with ai bot grace
+mission
+	welcome player
+	introduce grace
+	explain game and rules
+	help player setup avatar
+	select game difficulty
+	start tutorial game session with grace
+	tell player that he/she is ready to start game
+	start game
+	
+game is made up of levels and levels contains interrelated scenes
+for every level and scene give description and aim
+
+game occurs in a chat like activity
+
+introduction or description is given about scenes
+aim is communicated
+and ConversationGameSession begins
+user gain points if responses or messages sent by user have the gb(good bad) score it was assigned
+user can be asked to 
+make someone feel bad
+make someone uncomfortable or angry
+console someone
+report someone
+ignore someone
+counter someones bad messages
+
+in chat timely dialog to tell player what he or she should be doing
+
+build preset gallery for game conversations sessions
+sometimes use players actual gallery
+check all words sent in users text and make sure they are valid
+the game is a life of a boy or a girl
+
+
+###Plan Levels and Scenes
+	//syntax level {[scene (description), ...]}
+	//here are some example levels i thought of.. you can complete them with scenes
+	//please make sure that the scenes are interrelated and that one scene could lead to the next
+	//the time lines should be logical like in a story
+
+	primary school {
+		new weird guy in school (everybody talk about player on your first day in school and player friend tell you about it),
+		after the excursion (at the excursion player makes fun of someone else),
+		classmates birthday party (player is not invited),
+		poor performance (player laughed at by mates because of poor performance)
+	}
+	high school { the party (player is faced with an embarrassing moment and it goes viral)}
+	vacation job {}
+	holidays {}
+	parties {}
+	dating {}
+	university {}
+	relationships {}
+	internship {}
+	working {}
+	promotions {}
+	marriage {}
+	own kids {}
+	done
+
+
+
+
+###Example Scene (The Party) //in level high school
+
+Description:
+    <player name> goes to a party and does something embarrassing and it quickly spreads over the internet;
+
+Aim:
+    //aim is optional
+    react to the situation calmly
+
+Actors:
+    //syntax [actor_name -role -info]
+
+    player (attendee)
+    steve (friend)
+    chris (crush)
+    mina (crush)
+    jade (party host)
+    jacob (attendee - bully at school)
+
+Conversation:
+    //syntax [sender(actor name) - receivers(actor names) : message(options)[! means response must be in options]]
+
+    steve - player: hi <wait-response: 10s>
+    player - steve : respond (hi, hello)
+    steve - player : hey are you coming to the party tonight right? <wait-response>
+    player - steve : respond (don't know. i wasn't invited, yes, no)!
+    steve - player : Decide{
+        don't know. i wasn't invited: well i was and your coming. you'll be my plus one. you need to chill.
+        yes: awesome. you'll meet me at the bus stop at 8. and don't be late
+        no: [what?!!! how can you say that. look we're in high school. this is the the time to have fun. , am taking you..so you better be ready.]
+    }
+    player - steve : respond()
+    steve - player : you know (gender == male ? mina: chris) is going to be there. and we both know you have a crush on  (gender == male ? her: him)
+    player - steve : respond() <wait-response: 5 seconds>
+    steve - player : well ill see you there?
+
+    gladys - player : picture of people partying
+    gladys - player : at the party you got drunk and tried to kiss (gender == male ? mina: chris). but jacob saw and pushed you away laughing. you fell in the punch (drink) they made. then jade came to you and ask you to leave so you ran home.
+
+    steve - player: hey have you seen your video? you're trending online <wait-response>
+    player - steve : respond (no, yes, what video?)!
+    steve - player : Decide{
+        no: am so sorry.. they made a video when you fell in the punch. everybody is laughing
+        yes: am so sorry.. they made a video when you fell in the punch. everybody is laughing
+        what video: [picture message of someone falling, am so sorry.. they made a video when you fell in the punch. everybody is laughing]
+    }
+    steve - player: so what do we do <wait-response>
+    player - steve : respond () <expect tell, report>
+
+
+
+TODO: complete Content Option Functionality
+TODO: add Media messages functionality
+TODO: add Sentiment Analysis
+TODO: add Online User Records (track user score and progress)
+TODO: (optional) add Level to remote database
+TODO: add game animations
+TODO: add chat activity
+TODO: add push notification
+
+
+
+//new idea
+//list of chats for actor or group of actors
+
+IN FIREBASE FIRSTORE
+
+User
+    info {
+        scene-index: int,
+        conversation-index: int
+    }
+
+
+StoryModeChats
+    uid : {
+        chat-list: [Chats],
+        conversations:{
+            chat('actor-name'|'group-name'):{
+                last-message-index: int,
+                actors: {
+                    list-of-people-in-chat
+                },
+                actors-name-map:{
+                    mike: chris //changed actors name
+                },
+                messages: {
+                    actor-name: message-content
+                },
+                score: int
+            }
+        }
+    }
+
+//before every conversation
+//check if conversation name exist if true append to old conversation else create new
+//allow users to change actors name in chat list
+
+GladysChat:
+    question: [...,response]
+    pending: {
+        uid: [...,question]
+    }
+    responses{
+        uid: [...,{question: response}]
+    }
+
+//send pending to gladies herself for answers
+
+PlayersChat:
+    uid:
+
+PlayersFriends:
+    uid:
+
+PlayersRequests:
+    uid:
+
+
+TODO: make Conversation carry a chat item
+//if chat item not in chat list add to list else to into chat and play conversation
+//show first message in conversation as last message sent and unread count 1
+//on open chat show first message and set start read index to 1
+
+TODO: allow content options to have display message and actual content message
+//ei. TaggedMessageContent extends MessageContent //getTag() display tag
+//tag: display message: tell mom about problem
+//content: actual message: mom ive people are talking about me online and they say i im weird. i dont know what to do
+
+//TODO: notes about story mode
+//chats are updated after every successfully completed conversation
+//update for last message last seen, last message, message count.
+//and update info scene-index, conversation-index, last-message-index
+//if scene conversation complete add next conversation to chats and if new chat add to remote db
+
+//TODO: notes about game chat activity
+//if chat not with gladys
+//on start
+    //try load previous message from local db
+    //if fail try load from remote
+//on conversation complete or cancel:
+    //append new messages in chat to remote db by using
+    //scene-index, conversation-index, last message index of chat then
+    //update chat scene-index, conversation-index and last message index
+
+
+intent.putExtra("room", "La6Kz3gF4cd3B0wVfz80maMdhyc2_BfPgrgT08FWpTrgZaQz6kYgPGrg2");

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "235023108262",
+    "firebase_url": "https://cybuverse.firebaseio.com",
+    "project_id": "cybuverse",
+    "storage_bucket": "cybuverse.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235023108262:android:a437d8aec7fedb72988c67",
+        "android_client_info": {
+          "package_name": "com.gladys.cybuverse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "235023108262-m5m29ikf753e2ujgvgs2r9d8l49j2545.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gladys.cybuverse",
+            "certificate_hash": "ad44719884cf73c72edb8d652ad9d6a8875064e7"
+          }
+        },
+        {
+          "client_id": "235023108262-ebupagqdmrvenjtmdcnspa0qp72ocpur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5_69Etux5SFsbmAF-VPBy_AZIoeumCo0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "235023108262-ebupagqdmrvenjtmdcnspa0qp72ocpur.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

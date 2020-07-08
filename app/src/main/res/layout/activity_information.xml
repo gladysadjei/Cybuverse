@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/goldish"
+    tools:context=".Activities.InformationActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scene Description"
+        android:textSize="24sp"
+        android:padding="8dp"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/info_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_gladys"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/info_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, illo, iste. Asperiores assumenda dignissimos id laborum minus molestiae quae reiciendis saepe! Eligendi provident quam repellendus ullam. Delectus facere fuga hic inventore! Alias dolore doloremque ducimus maxime nesciunt, praesentium. Ea earum eligendi exercitationem numquam provident quo ullam voluptas. Accusamus adipisci aliquam aliquid aperiam at consequatur eveniet illo ipsum laborum magni maxime, modi molestiae, natus nesciunt nihil non nulla odit placeat porro possimus provident quam quasi quo recusandae repellat ut veritatis voluptas. Accusantium alias architecto as"/>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/proceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darker_blue"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_gravity="bottom"
+        android:text="Okay"/>
+
+</LinearLayout>
